@@ -47,9 +47,9 @@ client.connect()
   // Creates a new user in the collection with the `user` parameter and the JSON sent with the req in the `body` property
   app.post("/:point", (req, res) => {
     // inserts a new document in the database (collection)
-    console.log("in Post\n");
-    console.log(req.body);
-    console.log(JSON.stringify(req.body));
+    //console.log("in Post\n");
+    //console.log(req.body);
+    //console.log(JSON.stringify(req.body));
     const product=req.body;
     collection.insertOne(
       product)
