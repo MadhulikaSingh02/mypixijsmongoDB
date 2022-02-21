@@ -1,4 +1,4 @@
-# A nodejs server that reads data from mongoDB and draws using p polygon using pixi
+# A nodejs server that reads data from mongoDB and draws using polygon using pixi
 To run
 
 ```npm install```
