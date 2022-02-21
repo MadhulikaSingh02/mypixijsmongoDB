@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 // select version 4.0.* as the node.js driver
 
 const uri = "mongodb+srv://madhulika:me%40A2173@cluster0.hmdpb.mongodb.net/test?retryWrites=true&w=majority"; // %40 is used here for '@'
-const client = new MongoClient(uri);//, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const client = new MongoClient(uri);
 // connect to your MongoDB database through your URI. 
 // The connect() function takes a uri and callback function as arguments.
 var collection=null;
