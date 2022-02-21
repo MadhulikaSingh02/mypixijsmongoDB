@@ -7,6 +7,8 @@ const app = express(); // instantiate express
 app.use(require("cors")()); // allow Cross-domain requests
 app.use(require("body-parser").json()); // automatically parses request data to JSON
 
+app.set('view engine', 'ejs');
+
 // make sure in the free tier of MongoDB atlas when connecting, to
 // select version 4.0.* as the node.js driver
 
@@ -31,7 +33,8 @@ client.connect()
         res.send("Error in GET req.");
       } else {
         // if all works
-        res.send(docs); //check
+        //res.send(docs); //check
+        res.render('index',{docs:docs});
         docs.forEach(element => {
             console.log(element.points);
         });

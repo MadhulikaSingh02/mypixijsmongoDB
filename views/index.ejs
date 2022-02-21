@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+</head>
+<body>
+  <script src="https://pixijs.download/v6.2.2/pixi.min.js"></script>
+  <script type="text/javascript">
+//Aliases
+const Application = PIXI.Application,
+    Container = PIXI.Container,
+    loader = PIXI.Loader.shared,
+    resources = PIXI.Loader.shared.resources,
+    Graphics = PIXI.Graphics,
+    TextureCache = PIXI.utils.TextureCache,
+    Sprite = PIXI.Sprite;
+
+//Create a Pixi Application
+const app = new Application({                  
+    antialias: true
+  });
+
+    //Add the canvas that Pixi automatically created for you to the HTML document
+    document.body.appendChild(app.view);
+    //const path= [600,370,700,460,780,420,730,570,590,520];
+    const shape = new Graphics();
+    shape.lineStyle(0);
+    shape.beginFill(0x66FF33,1);
+    <% docs.forEach(path => { %>
+        shape.drawPolygon(<%= path.points%>);
+        <%});%>
+
+    //shape.drawPolygon(path);
+
+    shape.endFill();
+    //shape.x = 180;
+    //shape.y = 22;
+
+    app.stage.addChild(shape);
+  </script>
+</body>
+</html>
