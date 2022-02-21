@@ -1,4 +1,4 @@
-# A small project to read data from mongoDB and draw using pixi
+# A nodejs server that reads data from mongoDB and draws using p polygon using pixi
 To run
 
 ```npm install```
