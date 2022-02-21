@@ -5,7 +5,11 @@ To run
 
 ```node app.js```
 
-## Add Polygon points
+open browser and type
+
+``` http://localhost:4567/points ```
+
+## Add Polygon points to database
 
 post to ```localhost/4567/points ``` with following settings
 
