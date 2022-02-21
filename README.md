@@ -7,7 +7,7 @@ This is a small project that
     - Reads points from mongoDB
     - Renders an html page that draws a polygon
         -  the points array is passed to html using ejs
-3. Has a post route to add polygon points to DB
+3. Has a POST route to add polygon points to DB
 
 To install and run
 
