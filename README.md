@@ -2,7 +2,7 @@
 
 This is a small project that 
 
-1. Implements a server using express/node js
+1. Implements a server using express/nodejs
 2. Has a GET route that
     - Reads points from mongoDB
     - Renders an html page that draws a polygon
