@@ -16,8 +16,9 @@ const uri = "mongodb+srv://madhulika:me%40A2173@cluster0.hmdpb.mongodb.net/test?
 const client = new MongoClient(uri);
 // connect to your MongoDB database through your URI. 
 // The connect() function takes a uri and callback function as arguments.
-client.connect()
+client.connect() //connect() is a Promise
   .then(() => {
+    //Proceed only when Promise is fulfilled (DB is connected)
     const collection = client.db("test").collection("users");
     app.get("/:point", (req, res) => {
 
@@ -63,6 +64,7 @@ client.connect()
     });
   })
   .catch(err => {
+    //if Promise is not fulfilled (DB did not connect)
     client.close();
     console.log(err);
   });
